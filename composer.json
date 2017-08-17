@@ -1,0 +1,21 @@
+{
+    "name": "jfreeman82/fritter",
+    "description": "A Free Twitter Platform",
+    "authors": [
+        {
+            "name": "jfreeman",
+            "email": "jfreeman@skedaddling.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "url": "https://github.com/jfreeman82/freestrouter.git",
+            "type": "git"
+        }
+      ],
+    "require": {
+        "Twig/Twig": "2.4.3",
+        "jfreeman82/freestrouter": "@dev"
+    }
+}
