@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "jfreeman82/freestrouter",
-            "version": "dev-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jfreeman82/freestrouter.git",
-                "reference": "b420d0b2411cf5776ca45450d5638731e364d043"
+                "reference": "d028b9700cdff3ff3bcbf400b275d1ff49b0e17b"
             },
             "type": "library",
             "authors": [
@@ -22,7 +22,7 @@
                 }
             ],
             "description": "A PHP URL Router.",
-            "time": "2017-08-16T15:04:54+00:00"
+            "time": "2017-08-17T13:08:47+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
