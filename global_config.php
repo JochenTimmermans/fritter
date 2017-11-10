@@ -14,7 +14,7 @@ define("MYSQL_USER","fritter");
 define("MYSQL_PASS","fritteruser");
 define("MYSQL_DB","fritteruser12345");
 
-define('SITE_TITLE', 'Framework');
+define('SITE_TITLE', 'Fritter');
 
 //router
 define('BASE_ROUTE', 'public/');

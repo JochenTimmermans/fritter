@@ -1,0 +1,245 @@
+/* 
+    Created on : Nov 10, 2017, 12:00:44 PM
+    Author     : jfreeman82 <jfreeman@skedaddling.com>
+*/
+
+@import 'include/reset';
+@import 'include/container';
+
+$gray: #888;
+$twitter-dark-blue: #0084b4;
+$twitter-blue: #00aced;
+$twitter-verified-blue: #1dcaff;
+$twitter-background-blue: #c0deed;
+
+body {
+  box-sizing: border-box;
+  
+  font-family: arial;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+nav {
+  color: $gray;
+  font-family: arial;
+  font-size: 10pt;
+  margin: 0 auto 1px auto;
+  width: 1200px;
+   
+  a {
+    color: $gray;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      display: inline-block;
+      
+    }
+  }
+  
+  
+  
+  
+  
+  .left {
+    float: left;
+    
+    ul {
+      li {
+        
+        a {
+          border-bottom: 2px solid white;;
+          display: block;
+          font-weight: bold;
+          line-height: 24px;
+          padding: 10px 10px;
+          
+          &:hover {
+            border-bottom: 2px solid $twitter-blue;
+          }
+          
+          &:first-of-type {
+            padding-left: 15px;
+          }
+          
+          i {
+            color: $twitter-blue;
+            font-size: 16pt;
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+          
+        }
+        
+      }
+    }
+    
+  }
+  .right {
+    float: right;
+    ul {
+      li {
+        button {
+          border: none;
+          display: block;
+          font-size: 10pt;
+          padding: 12px 8px ;
+          
+          span.fat {
+            font-weight: bold;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* DROP DOWN LOGIN */
+ /* Dropdown Button */
+.dropbtn {
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 85px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+
+/* DROPDOWN LOGIN END */
+
+
+/* dropdown styling */
+
+#logindropdown {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  
+  .lf-text {
+    display: block;
+    font-size: 12pt;
+    padding: 10px 0;
+    color: $gray;
+    width: 100%;
+    text-align: left;
+  }
+  input[type=text],input[type=password] {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    display: block;
+    width: 100%;
+    
+    &:focus {
+      border: thin solid $twitter-blue;
+      padding: 4px 10px;
+    }
+  }
+  input[type=submit],button {
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 0;
+    width: 100%;
+  }
+  input[type=submit] {
+    background-color: $twitter-blue;
+    border: none;
+    color: white;
+    &:hover {
+      background-color: $twitter-dark-blue;
+    }
+  }
+  
+  
+  button {
+    border: thin solid $twitter-blue;
+    color: $twitter-dark-blue;
+    
+    &:hover {
+      background-color: lighten($twitter-background-blue,10%);
+    }
+  }
+  
+  .lf-check {
+    width: 100%;
+    vertical-align: middle;
+   
+    div {
+      display: inline-block;
+    }
+    
+    .lfc-left {
+      display: inline-block;
+  //    float: left;
+      vertical-align: middle;
+      input {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+      }
+    }
+    .lfc-right {  
+      display: inline-block;
+//      float: right;
+      a {
+        color: $twitter-blue;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* dropdown styling end */
+
+
+#main-outer {
+  background-color: $twitter-background-blue;
+  border-top: 1px solid #888;
+  clear: both;
+  height: 100%;
+  
+  #main {
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    width: 1024px;
+  }
+  
+}

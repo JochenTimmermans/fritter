@@ -1,0 +1,170 @@
+/* 
+    Created on : Nov 10, 2017, 12:00:44 PM
+    Author     : jfreeman82 <jfreeman@skedaddling.com>
+*/
+/* 
+    Created on : Nov 10, 2017, 12:00:44 PM
+    Author     : jfreeman82 <jfreeman@skedaddling.com>
+*/
+body {
+  margin: 0;
+  padding: 0; }
+
+/* 
+    Created on : Nov 10, 2017, 12:03:23 PM
+    Author     : jfreeman82 <jfreeman@skedaddling.com>
+*/
+.container {
+  width: 100%; }
+
+body {
+  box-sizing: border-box;
+  font-family: arial;
+  height: 100vh;
+  overflow-y: hidden; }
+
+nav {
+  color: #888;
+  font-family: arial;
+  font-size: 10pt;
+  margin: 0 auto 1px auto;
+  width: 1200px; }
+  nav a {
+    color: #888;
+    text-decoration: none; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      display: inline-block; }
+  nav .left {
+    float: left; }
+    nav .left ul li a {
+      border-bottom: 2px solid white;
+      display: block;
+      font-weight: bold;
+      line-height: 24px;
+      padding: 10px 10px; }
+      nav .left ul li a:hover {
+        border-bottom: 2px solid #00aced; }
+      nav .left ul li a:first-of-type {
+        padding-left: 15px; }
+      nav .left ul li a i {
+        color: #00aced;
+        font-size: 16pt;
+        margin-right: 5px;
+        vertical-align: middle; }
+  nav .right {
+    float: right; }
+    nav .right ul li button {
+      border: none;
+      display: block;
+      font-size: 10pt;
+      padding: 12px 8px; }
+      nav .right ul li button span.fat {
+        font-weight: bold;
+        margin-left: 5px; }
+
+/* DROP DOWN LOGIN */
+/* Dropdown Button */
+/* Dropdown button on hover & focus */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 85px; }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1; }
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block; }
+
+/* DROPDOWN LOGIN END */
+/* dropdown styling */
+#logindropdown {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center; }
+  #logindropdown .lf-text {
+    display: block;
+    font-size: 12pt;
+    padding: 10px 0;
+    color: #888;
+    width: 100%;
+    text-align: left; }
+  #logindropdown input[type=text], #logindropdown input[type=password] {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    display: block;
+    width: 100%; }
+    #logindropdown input[type=text]:focus, #logindropdown input[type=password]:focus {
+      border: thin solid #00aced;
+      padding: 4px 10px; }
+  #logindropdown input[type=submit], #logindropdown button {
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 0;
+    width: 100%; }
+  #logindropdown input[type=submit] {
+    background-color: #00aced;
+    border: none;
+    color: white; }
+    #logindropdown input[type=submit]:hover {
+      background-color: #0084b4; }
+  #logindropdown button {
+    border: thin solid #00aced;
+    color: #0084b4; }
+    #logindropdown button:hover {
+      background-color: #e8f3f8; }
+  #logindropdown .lf-check {
+    width: 100%;
+    vertical-align: middle; }
+    #logindropdown .lf-check div {
+      display: inline-block; }
+    #logindropdown .lf-check .lfc-left {
+      display: inline-block;
+      vertical-align: middle; }
+      #logindropdown .lf-check .lfc-left input {
+        margin: 0 10px 0 0;
+        vertical-align: middle; }
+    #logindropdown .lf-check .lfc-right {
+      display: inline-block; }
+      #logindropdown .lf-check .lfc-right a {
+        color: #00aced;
+        display: inline-block; }
+
+/* dropdown styling end */
+#main-outer {
+  background-color: #c0deed;
+  border-top: 1px solid #888;
+  clear: both;
+  height: 100%; }
+  #main-outer #main {
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    width: 1024px; }
+
+/*# sourceMappingURL=front.css.map */
