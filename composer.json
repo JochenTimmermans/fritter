@@ -1,0 +1,25 @@
+{
+  "name": "framework",
+  "description": "A framework off of which to base all my projects",
+  "repositories": [{
+          "type":"package",
+          "package": {
+            "name": "JochenTimmermans/freestrouter",
+            "version":"v0.1",
+            "source": {
+                "url": "git@github.com:JochenTimmermans/freestrouter.git",
+                "type": "git",
+                "reference":"v0.1"
+              },              
+            "autoload": {
+                "classmap": ["Router.php"]
+            }
+              
+          }
+      }
+  ],
+  "require": {
+    "twig/twig": "^2.0",
+    "JochenTimmermans/freestrouter": "v0.1"
+  }
+}
