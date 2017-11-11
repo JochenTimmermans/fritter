@@ -10,9 +10,9 @@ require_once '../local_config.php';
 define('WWW', BASE_URL);
 
 define("MYSQL_HOST","localhost");
-define("MYSQL_USER","fritter");
-define("MYSQL_PASS","fritteruser");
-define("MYSQL_DB","fritteruser12345");
+define("MYSQL_USER","fritteruser");
+define("MYSQL_PASS","fritteruser12345");
+define("MYSQL_DB","fritter");
 
 define('SITE_TITLE', 'Fritter');
 
@@ -20,9 +20,17 @@ define('SITE_TITLE', 'Fritter');
 define('BASE_ROUTE', 'public/');
 
 // Requires
-require_once 'src/modules/DBC.php';
 require_once 'vendor/JochenTimmermans/freestrouter/Router.php';
 
 require_once 'vendor/autoload.php';
 
 require_once 'src/mvc/controller/Controller.php';
+require_once 'src/mvc/controller/LoggedInController.php';
+
+require_once 'src/mvc/model/UserModel.php';
+
+require_once 'src/modules/classes/DBC.php';
+require_once 'src/modules/classes/Error.php';
+require_once 'src/modules/classes/Follow.php';
+require_once 'src/modules/classes/Freet.php';
+require_once 'src/modules/classes/User.php';
