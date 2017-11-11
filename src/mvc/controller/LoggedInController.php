@@ -1,69 +1,30 @@
 <?php
 
-namespace framework\mvc\controller;
+namespace fritter\mvc\controller;
 
-use Twig_Loader_Filesystem;
-use Twig_Environment;
-
-use freest\router\Router as Router;
-
+use fritter\mvc\controller\Controller;
 
 /* 
  * Controller.php
  */
 
-class Controller 
+class LoggedInController extends Controller
 {
-    protected $twig;
-    protected $twigarr;
     
-    protected $db;
-    
-    protected $router;
-    
-    public function __construct() 
-    {
-        // firing up Twig
-        $loader = new Twig_Loader_Filesystem(ROOT_URL.'src/mvc/view/');
-        $this->twig = new Twig_Environment($loader, array('cache' => false));
-        $this->twigarr_init();    
-        // router   
-        $this->startRouter();
-    }
-        
-    protected function startRouter() 
-    {        
-        $router = new Router();
-        $router->route('game',    '1');
-        $this->router = $router;
-    }
-    private function twigarr_init()
-    {        
-        $this->twigarr['site_title'] = SITE_TITLE;
-        $this->twigarr['www'] = WWW;
-    }
     
     
     public function invoke() 
     {
-        //var_dump($this->router->routemap);
-        //exit(0);
-        if ($this->router->get() == '1') {
-            $this->game();
-        }
-        else {
-            $this->front();
-        }
+        $this->home();
     }
     
-    protected function front() {
-        $template = $this->twig->load('front.twig');
+    protected function home() {
+        $template = $this->twig->load('home.twig');
         echo $template->render($this->twigarr);        
     }
     
-    protected function game() {
-        $sc = new GameController();
-        $sc->invoke();
+    protected function about() {
+        $template = $this->twig->load('about.twig');
+        echo $template->render($this->twigarr);        
     }
-    
 }

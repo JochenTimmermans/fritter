@@ -1,12 +1,13 @@
 <?php
 
-namespace framework\mvc\controller;
+namespace fritter\mvc\controller;
 
 use Twig_Loader_Filesystem;
 use Twig_Environment;
 
 use freest\router\Router as Router;
 
+use fritter\mvc\model\UserModel;
 
 /* 
  * Controller.php
@@ -34,7 +35,7 @@ class Controller
     protected function startRouter() 
     {        
         $router = new Router();
-        $router->route('game',    '1');
+        $router->route('about',    '1');
         $this->router = $router;
     }
     private function twigarr_init()
@@ -46,13 +47,29 @@ class Controller
     
     public function invoke() 
     {
-        //var_dump($this->router->routemap);
-        //exit(0);
+        if (!UserModel::isLoggedIn()) {
+            $check = UserModel::loginformCheck();
+        }
+        
+        if (UserModel::isLoggedIn()) {
+            $lic = new LoggedInController();
+            $lic->invoke();
+            exit();
+        }
+        
         if ($this->router->get() == '1') {
-            $this->game();
+            $this->about();
         }
         else {
-            $this->front();
+            switch($check['status']) {
+                case '1':                    
+                    header("Location: ".www);
+                case "warning":
+                    $this->twigarr['warning'] = $check['warning'];
+                    $this->front();
+                default:
+                    $this->front();
+            }
         }
     }
     
@@ -61,9 +78,8 @@ class Controller
         echo $template->render($this->twigarr);        
     }
     
-    protected function game() {
-        $sc = new GameController();
-        $sc->invoke();
+    protected function about() {
+        $template = $this->twig->load('about.twig');
+        echo $template->render($this->twigarr);        
     }
-    
 }
