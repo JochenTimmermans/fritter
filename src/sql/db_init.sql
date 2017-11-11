@@ -3,13 +3,13 @@
  * Created: Sep 08, 2017
  */
 
-DROP DATABASE IF EXISTS hangman;
-CREATE DATABASE hangman;
+DROP DATABASE IF EXISTS fritter;
+CREATE DATABASE fritter;
 
-USE hangman;
+USE fritter;
 
-DROP USER IF EXISTS 'hangmanuser'@'localhost';
+DROP USER IF EXISTS 'fritteruser'@'localhost';
 
-CREATE USER 'hangmanuser'@'localhost' IDENTIFIED BY 'hangmanuser12345';
+CREATE USER 'fritteruser'@'localhost' IDENTIFIED BY 'fritteruser12345';
 
-GRANT ALL ON hangman.* TO 'hangmanuser'@'localhost';
+GRANT ALL ON fritter.* TO 'fritteruser'@'localhost';
