@@ -20,7 +20,7 @@
       <nav>
         <div class="left">
           <ul>
-            <li><a href="{{ www }}home/"><i class="fa fa-2x fa-twitter"></i>Home</a></li>
+            <li><a href="{{ www }}"><i class="fa fa-2x fa-twitter"></i>Home</a></li>
             <li><a href="{{ www }}about/">About</a></li>
           </ul>
         </div>
@@ -33,21 +33,24 @@
                 <span class="fat">Log In</span>
                 <i class="fa  fa-caret-down"></i>
               </button>
-            </li>
+            </li> 
           </ul>  
           <div id="logindropdown" class="dropdown-content">
             <span class="lf-text">Have an account?</span>
-            <input type="text" name="lf_email" value="demo"/>
-            <input type="password" name="lf_password" value="demo"/>
-            <div class="lf-check">
-              <div class="lfc-left">
-                <input type="checkbox" style="vertical-align: middle;margin-right: 5px;"/>Remember me 
+            <form action="{{www}}" method="POST">
+              <input type="text" name="lf_email" value="demo"/>
+              <input type="password" name="lf_password" value="demo"/>
+              <div class="lf-check">
+                <div class="lfc-left">
+                  <input type="checkbox" style="vertical-align: middle;margin-right: 5px;"/>Remember me 
+                </div>
+                <div class="lfc-right">
+                  <a href="">Forgot password?</a>
+                </div>
               </div>
-              <div class="lfc-right">
-                <a href="">Forgot password?</a>
-              </div>
-            </div>
-            <input type="submit" value="Log In"/>
+              <input type="hidden" name="loginform" value="go"/>
+              <input type="submit" value="Log In"/>
+            </form>
             <span class="lf-text">New to Fritter?</span>
             <button href="">Sign Up</button>
           </div>
@@ -59,6 +62,11 @@
 
     <div class="container" id="main-outer">
       <div id="main">
+        
+        {% if warning is defined %}
+        <div class="alert alert-danger">{{warning}}</div>
+        {% endif %}
+        
         
         <h1>Fritter</h1>
         <h3>The Freest Twitter</h3>
